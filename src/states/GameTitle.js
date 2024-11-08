@@ -8,8 +8,15 @@ class GameTitleScene extends Phaser.Scene{
         this.gameTitle = this.add.sprite(160, 160, 'gameTitle');
         this.gameTitle.setOrigin(0.5, 0.5);  
 
-        this.playButton = this.add.sprite(160, 320, 'play');
-        this.playButton.setOrigin(0.5, 0.5);
+        this.text_ = this.add.text(100, 0, 'Bica 4 life G_G and forever',{
+            font: '10px Arial',
+            fill: '#FFFFFF'
+        });
+        
+        this.playButton = this.add.text(100, 50, 'Juan Flores Tenorio',{
+            font: '10px Arial',
+            fill: '#FFFFFF'
+        });
         this.playButton.setInteractive();
         this.playButton.on('pointerdown', () => {
             this.playTheGame();

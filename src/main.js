@@ -1,6 +1,6 @@
 import PreloadScene from "./states/Preload";
 import GameTitleScene from "./states/GameTitle";
-import TheGameScene from "./states/TheGame";
+import TheGameScene from "./states/TheGameScene";
 import GameOverScene from "./states/GameOver";
 
 let config = {
@@ -10,6 +10,9 @@ let config = {
     scale:{
         mode: Phaser.FIT,
         autoCenter: Phaser.CENTER_BOTH
+    },
+    physics:{
+        default : 'arcade'
     }
 }
 new Phaser.Game(config);
