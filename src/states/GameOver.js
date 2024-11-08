@@ -16,7 +16,7 @@ class GameOverScene extends Phaser.Scene{
             font: '10px Arial',
             fill: '#FFFFFF'
         });
-        this.text_ = this.add.text(100, 0, 'Puntaje: ' + this.score,{
+        this.text_ = this.add.text(100, 50, 'Puntaje: ' + this.score,{
             font: '10px Arial',
             fill: '#FFFFFF'
         });

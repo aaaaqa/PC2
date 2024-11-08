@@ -37,6 +37,7 @@ class TheGameScene extends Phaser.Scene{
         });
 
         this.score = 0;
+        this.consecutive = 0;
         this.life = 3;
     }
 
@@ -80,9 +81,16 @@ class TheGameScene extends Phaser.Scene{
     hitAlien(player, alien){
         if(alien.texture == player.texture){
             this.score += 10;
+            this.consecutive += 1;
+            if(this.consecutive % 3 == 0){
+                this.score *= 2;
+            } else if(this.consecutive % 5 == 0) {
+                this.score *= 4;
+            }
             this.playButton.text = "Puntaje: " + this.score;
         }else{
             this.life -= 1;
+            this.consecutive = 0;
             this.lifes.text = "Vidas: " + this.life;
         }
         alien.destroy();
