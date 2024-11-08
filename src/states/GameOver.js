@@ -7,7 +7,7 @@ class GameOverScene extends Phaser.Scene{
 
     create() {
         this.gameOverTitle = this.add.sprite(160, 160, 'gameover');
-        this.gameOverTitle.setAnchor(0.5, 0.5);
+        this.gameOverTitle.setOrigin(0.5, 0.5);
         this.gameOverTitle.setInteractive();
         this.gameOverTitle.on('pointerdown', () => {
             this.playTheGame();
