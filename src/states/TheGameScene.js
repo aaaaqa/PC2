@@ -39,6 +39,7 @@ class TheGameScene extends Phaser.Scene{
         this.score = 0;
         this.consecutive = 0;
         this.life = 3;
+        // Please teacher
     }
 
     initPlayer(){
